@@ -1,0 +1,38 @@
+modLoader="javafxmod"
+loaderVersion="[47,)"
+license="MIT"
+
+[[mods]]
+modId="ftbwar"
+version="1.0.0"
+displayName="FTB Teams War Addon"
+logoFile="ftbwar_logo.png"
+credits="WarModAddon Contributors"
+authors="WarModAddon Team"
+description="""
+War system addon for FTB Teams and FTB Chunks.
+
+Features:
+- /war <team> - Start war with another team (requires 39% online)
+- /waraccept - Accept war request
+- /peace <team> - Make peace
+- /infowar - List enemies
+- /nonaggression pact <team> - Create 5-day non-aggression pact
+- Chunk capture system (5 minutes)
+- PvP only during war
+- Block breaking only against enemies
+"""
+
+[[dependencies.ftbwar]]
+    modId="ftbteams"
+    mandatory=true
+    versionRange="[2.0,)"
+    ordering="AFTER"
+    side="SERVER"
+
+[[dependencies.ftbwar]]
+    modId="ftbchunks"
+    mandatory=true
+    versionRange="[2.0,)"
+    ordering="AFTER"
+    side="SERVER"
